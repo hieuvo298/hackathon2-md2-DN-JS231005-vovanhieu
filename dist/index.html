@@ -1,1 +1,55 @@
-z
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="./index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <header>
+        <h1>
+            Blog cá nhân
+        </h1>
+    </header>
+    <div class="main-content">
+        <h3>Thêm mới bài viết</h3>
+        <p>
+            Tiêu đề
+        </p>
+        <input type="text" id="tittle" placeholder="Tiêu đề bài viết">
+        <p>
+            Nội dung
+        </p>
+        <textarea  id="content" cols="60" rows="20" placeholder="Nội dung bài viết"></textarea>
+        <button onclick="addBlog()">Thêm bài viết</button>
+    </div>
+    <section class="content-blog">
+        <div class="new-content">
+            
+        </div>
+
+    </section>
+  <div class="modal" tabindex="-1" id="commentModal">
+    <div class="modal-dialog ">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Comment</h5>
+          <button  type="button"  onclick="closeModal()" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <textarea id="commentInput" placeholder="Nhập bình luận của bạn..."></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" onclick="addComment()" class="btn btn-primary">Thêm bình luận</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="./index.js"></script>
+</html>
