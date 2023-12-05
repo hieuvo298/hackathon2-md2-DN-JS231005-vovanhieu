@@ -1,55 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
+    <title>advance</title>
     <link rel="stylesheet" href="./index.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
 <body>
-    <header>
-        <h1>
-            Blog cá nhân
-        </h1>
-    </header>
-    <div class="main-content">
-        <h3>Thêm mới bài viết</h3>
-        <p>
-            Tiêu đề
-        </p>
-        <input type="text" id="tittle" placeholder="Tiêu đề bài viết">
-        <p>
-            Nội dung
-        </p>
-        <textarea  id="content" cols="60" rows="20" placeholder="Nội dung bài viết"></textarea>
-        <button onclick="addBlog()">Thêm bài viết</button>
+    <form>
+    <h3>Danh sách công việc</h3>
+    <div class="add-input">
+        <input type="text" id="input-form" autocomplete="off" autofocus placeholder="Nhập tên công việc">
+        <button onclick="addTodo()">Thêm</button>
+    </div >
+    <div class="list-todo">
+    <div class="todo-list">
+        <div class="checkbox">
+        <input type="checkbox" >
     </div>
-    <section class="content-blog">
-        <div class="new-content">
-            
-        </div>
+    <div class="icon">
+        <i  class="fa-solid fa-pen" style="color: #ffa200;"></i>
+        <i class="fa-solid fa-trash" style="color: #e10505;"></i>
+    </div>
+    </div>
 
-    </section>
-  <div class="modal" tabindex="-1" id="commentModal">
-    <div class="modal-dialog ">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Comment</h5>
-          <button  type="button"  onclick="closeModal()" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <textarea id="commentInput" placeholder="Nhập bình luận của bạn..."></textarea>
-        </div>
-        <div class="modal-footer">
-          <button type="button" onclick="addComment()" class="btn btn-primary">Thêm bình luận</button>
-        </div>
-      </div>
-    </div>
-  </div>
+</form>
+
+
+
+</div>
 </body>
 <script src="./index.js"></script>
 </html>
